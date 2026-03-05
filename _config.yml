@@ -57,7 +57,7 @@ plugins:
 author:
   name   : "Ben Bryant"
   avatar : "/assets/images/profile.jpg"
-  bio    : "UW Computer Science Student"
+  bio    : "CSE undergrad at UW"
   location: "Seattle WA"
   email  : "benbry@cs.washington.edu"
   links:
@@ -70,9 +70,6 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://www.instagram.com/ben.abryant/"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://benabryant.github.io/"
 
 footer:
   links:
