@@ -11,6 +11,10 @@
   --font-1:      'DM Sans', sans-serif;
   --font-2:      'Lora', Georgia, serif;
 
+  --sm:          0.9rem;
+  --xs:         0.8rem;
+
+
   --section-pad: clamp(4rem, 10vw, 4rem);
   --max-width:   880px;
   --radius:      12px;
@@ -35,6 +39,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  transition: background-color var(--transition), color var(--transition);
 }
 
 /* ─── Base ───────────────────────────────────────────────── */
@@ -46,7 +51,6 @@ body {
   font-family: var(--font-1);
   font-weight: 300;
   line-height: 1.75;
-  transition: background-color var(--transition), color var(--transition);
 }
 
 img { display: block; max-width: 100%; }
@@ -68,8 +72,9 @@ a:hover { opacity: 0.75; }
 
 /* ─── Typography ─────────────────────────────────────────── */
 .section-label {
+  display: block;
   font-family: var(--font-1);
-  font-size: 0.75rem;
+  font-size: var(--sm);
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -81,4 +86,19 @@ h2 {
   font-family: var(--font-2);
   font-size: clamp(1.6rem, 3vw, 2.2rem);
   margin-bottom: 2rem;
+}
+
+/* ─── Utilities ──────────────────────────────────────────── */
+
+/* Layout */
+.flex-col     { display: flex; flex-direction: column; }
+.flex-row     { display: flex; flex-direction: row; }
+
+/* Divider — adds a top border, used to separate sidebar sections */
+.divider-top  { border-top: 1.5px solid var(--border); }
+
+/* Nav link style — muted by default, primary on hover with no opacity fade */
+.nav-link:hover {
+  color: var(--primary);
+  opacity: 1;
 }

@@ -2,6 +2,7 @@ import Sidebar from './components/Sidebar'
 import About from './components/About'
 import HeaderImage from './components/HeaderImage'
 import Experience from './components/Experience'
+import Footer from './components/Footer'
 import './App.css'
 
 export default function App() {
@@ -12,6 +13,8 @@ export default function App() {
         <HeaderImage/>
         <About />
         <Experience />
+
+        <Footer />
       </main>
     </div>
   )

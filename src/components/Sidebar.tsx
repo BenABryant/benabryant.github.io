@@ -21,7 +21,7 @@ export default function Sidebar() {
   return (
     <aside className="sidebar">
       <img className="sidebar__photo" src="/profile.jpg" alt="Ben Bryant" />
-      <h1 className="sidebar__name">Ben Bryant</h1>
+      <h2 className="sidebar__name">Ben Bryant</h2>
       <p className="sidebar__tagline">
         CS student at <em>University of Washington</em>
       </p>

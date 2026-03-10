@@ -4,7 +4,6 @@ export default function About() {
   return (
     <section className="about section" id="about">
       <div className="section__inner">
-        {/* replace below with one sentence summary<span className="section-label">About me</span>*/}
         <h2>About Me</h2> 
         <div className="about__body">
           <p className="about__lead">

@@ -21,18 +21,18 @@
 }
 
 .exp__meta {
-  font-size: 0.82rem;
+  font-size: var(--xs);
   color: var(--primary);
   font-weight: 500;
-  margin-bottom: 0.4rem;
 }
 
 .exp__desc {
-  font-size: 0.92rem;
+  font-size: var(--sm);
   color: var(--text-muted);
+  margin-bottom: 0.2rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 880px) {
   .exp__columns {
     flex-direction: column;
     gap: 2.5rem;

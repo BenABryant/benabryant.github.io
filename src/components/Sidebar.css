@@ -19,10 +19,8 @@
 }
 
 .sidebar__name {
-  font-family: var(--font-2);
-  font-size: 1.5rem;
-  color: var(--text);
-  line-height: 1.2;
+  line-height: 1;
+  margin-bottom: 0;
 }
 
 .sidebar__tagline {
@@ -38,7 +36,7 @@
 }
 
 .sidebar__nav a {
-  font-size: 0.92rem;
+  font-size: var(--sm);
   font-weight: 500;
   color: var(--text-muted);
   transition: color var(--transition);
@@ -97,17 +95,17 @@
 }
 
 .sidebar__theme-toggle {
-  margin-top: auto;
   background: none;
-  border: 1px solid var(--border);
+  border: 2px solid var(--border);
   border-radius: var(--radius);
   color: var(--text-muted);
   cursor: pointer;
   font-family: var(--font-1);
-  font-size: 0.85rem;
+  font-size: var(--sm);
   padding: 0.5rem 0.75rem;
   display: flex;
   align-items: center;
+  align-self: center;
   gap: 0.5rem;
   transition: color var(--transition), border-color var(--transition);
 }
