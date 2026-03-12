@@ -19,7 +19,9 @@ export default function Skills() {
         <section className="skills section" id="skills">
             <div className="section__inner">
                 <h2>Skills</h2>
-                {SKILLS.map(SkillGroupItem)}
+                {SKILLS.map((group) => (
+                    <SkillGroupItem key={group.category} {...group} />
+                ))}
             </div>
         </section>
     )
@@ -93,10 +95,12 @@ const SkillItem = ({ label, icon }: Skill) => (
 )
 
 const SkillGroupItem = ({ category, skills }: SkillGroup) => (
-    <div key={category} className="skills__group">
+    <div className="skills__group">
         <p className="section-label">{category}</p>
         <div className="skills__badges">
-            {skills.map(SkillItem)}
+            {skills.map((skill) => (
+                <SkillItem key={skill.label} {...skill} />
+            ))}
         </div>
     </div>
 )

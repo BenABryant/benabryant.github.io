@@ -14,15 +14,16 @@
   --sm:          0.9rem;
   --xs:         0.8rem;
   --light:       300;
-  --heavy:       var(--heavy);
+  --heavy:       500;
 
 
-  --section-pad: clamp(4rem, 10vw, 4rem);
+  --section-pad: clamp(2rem, 8vw, 4rem);
   --max-width:   880px;
   --radius:      12px;
   --transition:  0.3s ease;
 
   --sidebar-width: 280px;
+  transition: background-color var(--transition), color var(--transition), opacity var(--transition);
 }
 
 /* ─── Dark Mode Tokens ───────────────────────────────────── */
@@ -60,7 +61,6 @@ img { display: block; max-width: 100%; }
 a {
   color: var(--primary);
   text-decoration: none;
-  transition: opacity var(--transition);
 }
 a:hover { opacity: 0.75; }
 

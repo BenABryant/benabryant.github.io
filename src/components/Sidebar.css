@@ -108,15 +108,9 @@
   .sidebar__tagline {
     display: none;
   }
-
-  .sidebar__location {
-    display: none;
-  }
-
   .sidebar__theme-toggle {
     display: none;
   }
-
   .sidebar__nav {
     flex-direction: row;
     border-top: none;

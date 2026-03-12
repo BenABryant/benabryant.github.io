@@ -11,6 +11,6 @@
   color: var(--text);
 }
 
-.about_body p {
+.about__body p {
   color: var(--text-muted);
 }
