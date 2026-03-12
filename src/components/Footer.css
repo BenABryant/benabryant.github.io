@@ -17,5 +17,4 @@
 .footer__back {
   color: var(--text-muted);
   font-size: var(--sm);
-  transition: color var(--transition);
 }

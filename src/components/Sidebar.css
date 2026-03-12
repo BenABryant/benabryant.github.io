@@ -39,7 +39,6 @@
   font-size: var(--sm);
   font-weight: var(--heavy);
   color: var(--text-muted);
-  transition: color var(--transition);
 }
 
 .sidebar__nav a:hover {
@@ -61,6 +60,30 @@
   opacity: 1;
 }
 
+.sidebar__theme-toggle {
+  background: none;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-muted);
+  cursor: pointer;
+  font-family: var(--font-1);
+  font-size: var(--sm);
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  gap: 0.5rem;
+}
+
+.sidebar__theme-toggle:hover {
+  color: var(--text);
+  border-color: var(--primary);
+}
+
+.sidebar__theme-toggle-mobile {
+  display: none;
+}
+
 /* ─── Sidebar becomes a top bar ─────────────────── */
 @media (max-width: 768px) {
   .sidebar {
@@ -77,9 +100,22 @@
     gap: 1rem;
   }
 
-  .sidebar__photo { width: 48px; height: 48px; }
-  .sidebar__tagline { display: none; } 
-  .sidebar__location {display: none;}
+  .sidebar__photo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .sidebar__tagline {
+    display: none;
+  }
+
+  .sidebar__location {
+    display: none;
+  }
+
+  .sidebar__theme-toggle {
+    display: none;
+  }
 
   .sidebar__nav {
     flex-direction: row;
@@ -92,21 +128,19 @@
   .sidebar__contact {
     display: none;
   }
-}
 
-.sidebar__theme-toggle {
-  background: none;
-  border: 2px solid var(--border);
-  border-radius: var(--radius);
-  color: var(--text-muted);
-  cursor: pointer;
-  font-family: var(--font-1);
-  font-size: var(--sm);
-  padding: 0.5rem 0.75rem;
-  display: flex;
-  align-items: center;
-  align-self: center;
-  gap: 0.5rem;
-  transition: color var(--transition), border-color var(--transition);
+  .sidebar__theme-toggle-mobile {
+    background: none;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 0.5rem 0.5rem;
+    display: flex;
+  }
+
+  .sidebar__theme-toggle-mobile:hover {
+    color: var(--text);
+    border-color: var(--primary);
+  }
 }
-.sidebar__theme-toggle:hover { color: var(--text); border-color: var(--primary); }

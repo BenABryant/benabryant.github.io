@@ -1,7 +1,7 @@
 import './Skills.css'
 import {
     SiC, SiCplusplus, SiPython, SiJavascript,
-    SiTypescript, SiGo, SiOcaml, SiR, SiMysql,
+    SiTypescript, SiOcaml, SiR,
     SiHtml5, SiReact, SiNodedotjs, SiLinux,
     SiGnubash, SiWireshark, SiGit, SiDocker,
     SiKubernetes, SiGooglecloud, SiLatex,
@@ -11,6 +11,7 @@ import {
     FaJava, FaMicrochip, FaCss3Alt, FaChartLine,
     FaWaveSquare, FaProjectDiagram, FaSitemap,
 } from 'react-icons/fa'
+import { PiFileSql } from 'react-icons/pi'
 
 
 export default function Skills() {
@@ -35,7 +36,7 @@ const SKILLS: SkillGroup[] = [
             { label: 'TypeScript', icon: <SiTypescript /> },
             { label: 'OCaml', icon: <SiOcaml /> },
             { label: 'R', icon: <SiR /> },
-            { label: 'SQL', icon: <SiMysql /> },
+            { label: 'SQL', icon: <PiFileSql /> },
             { label: 'Verilog', icon: <FaMicrochip /> },
         ],
     },

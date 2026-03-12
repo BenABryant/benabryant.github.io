@@ -31,6 +31,10 @@ export default function Sidebar() {
         {dark ? <FaSun /> : <FaMoon />}
         {dark ? 'Light mode' : 'Dark mode'}
       </button>
+      <button className="sidebar__theme-toggle-mobile" onClick={toggle} aria-label="Toggle dark mode">
+        {dark ? <FaSun /> : <FaMoon />}
+        {dark ? 'Light mode' : 'Dark mode'}
+      </button>
     </aside>
   )
 }

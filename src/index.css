@@ -41,7 +41,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  transition: background-color var(--transition), color var(--transition);
+  transition: background-color var(--transition), color var(--transition), opacity var(--transition);
 }
 
 /* ─── Base ───────────────────────────────────────────────── */
@@ -88,19 +88,4 @@ h2 {
   font-family: var(--font-2);
   font-size: clamp(1.6rem, 3vw, 2.2rem);
   margin-bottom: 2rem;
-}
-
-/* ─── Utilities ──────────────────────────────────────────── */
-
-/* Layout */
-.flex-col     { display: flex; flex-direction: column; }
-.flex-row     { display: flex; flex-direction: row; }
-
-/* Divider — adds a top border, used to separate sidebar sections */
-.divider-top  { border-top: 1.5px solid var(--border); }
-
-/* Nav link style — muted by default, primary on hover with no opacity fade */
-.nav-link:hover {
-  color: var(--primary);
-  opacity: 1;
 }

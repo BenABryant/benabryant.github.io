@@ -20,7 +20,6 @@
   font-size: var(--xs);
   font-weight: var(--heavy);
   letter-spacing: 0.02em;
-  transition: border-color var(--transition), color var(--transition);
   cursor: default;
 }
 
