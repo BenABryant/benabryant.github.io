@@ -1,4 +1,4 @@
-import { useTheme } from '../hooks/UseTheme'
+import { useTheme } from '../../hooks/UseTheme'
 import './Sidebar.css'
 import {
   FaSun, FaMoon, FaEnvelope,
@@ -18,7 +18,7 @@ export default function Sidebar() {
       <nav className="sidebar__nav">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
-
+        <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
       </nav>
 
@@ -32,7 +32,7 @@ export default function Sidebar() {
         {dark ? <FaSun /> : <FaMoon />}
         {dark ? 'Light mode' : 'Dark mode'}
       </button>
-      <button className="sidebar__theme-toggle-mobile" onClick={toggle} aria-label="Toggle dark mode">
+      <button className="sidebar__theme-toggle-mobile icon-btn" onClick={toggle} aria-label="Toggle dark mode">
         {dark ? <FaSun /> : <FaMoon />}
       </button>
     </aside>

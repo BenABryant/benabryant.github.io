@@ -1,6 +1,6 @@
 import './Skills.css'
 import {
-    SiC, SiCplusplus, SiPython, SiJavascript,
+    SiCplusplus, SiPython, SiJavascript,
     SiTypescript, SiOcaml, SiR,
     SiHtml5, SiReact, SiNodedotjs, SiLinux,
     SiGnubash, SiWireshark, SiGit, SiDocker,

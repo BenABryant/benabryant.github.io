@@ -1,7 +1,7 @@
 import "./HeaderImage.css"
 export default function HeaderImage() {
   return (
-    <div className="header-image" id="top">
+    <div className="header-image">
       <img
         src="/header.jpeg"
         alt="View of south pacific island from the water"

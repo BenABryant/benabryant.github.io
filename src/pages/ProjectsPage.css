@@ -1,0 +1,28 @@
+.projects-page__main {
+  flex: 1;
+  padding: clamp(2rem, 6vw, 4rem) 1.5rem;
+}
+
+.projects-page__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.projects-page__title {
+  font-family: var(--font-2);
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 0.75rem;
+}
+
+.projects-page__lead {
+  color: var(--text-muted);
+  font-size: var(--sm);
+  margin-bottom: 3rem;
+  max-width: 50ch;
+}
+
+.all-projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+}

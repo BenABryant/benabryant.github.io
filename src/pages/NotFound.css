@@ -1,0 +1,30 @@
+.notfound__main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  gap: 1rem;
+}
+ 
+.notfound__code {
+  font-family: var(--font-2);
+  font-size: clamp(5rem, 20vw, 10rem);
+  font-weight: calc(var(--heavy) * 1.2);
+  color: var(--border);
+  line-height: 1;
+}
+ 
+.notfound__title {
+  font-family: var(--font-2);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: var(--text);
+}
+ 
+.notfound__desc {
+  color: var(--text-muted);
+  font-size: var(--sm);
+  max-width: 36ch;
+}

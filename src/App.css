@@ -3,16 +3,6 @@
   min-height: 100vh;
 }
 
-.main {
-  flex: 1;
-  overflow-y: auto;
-}
-
-/* alternating section backgrounds */
-.main > section:nth-child(even) {
-  background-color: var(--bg-subtle);
-}
-
 @media (max-width: 768px) {
   .layout { flex-direction: column; } /* stack on mobile */
 }

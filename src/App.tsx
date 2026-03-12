@@ -1,23 +1,39 @@
-import Sidebar from './components/Sidebar'
-import About from './components/About'
-import HeaderImage from './components/HeaderImage'
-import Experience from './components/Experience'
-import Footer from './components/Footer'
-import Skills from './components/Skills'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Sidebar from './pages/mainPage/Sidebar'
+import About from './pages/mainPage/About'
+import HeaderImage from './pages/mainPage/HeaderImage'
+import Experience from './pages/mainPage/Experience'
+import PageFooter from './components/PageFooter'
+import Skills from './pages/mainPage/Skills'
+import Projects from './pages/mainPage/Projects'
+import ProjectsPage from './pages/ProjectsPage'
+import NotFound from './pages/NotFound'
 import './App.css'
-
-export default function App() {
+ 
+function HomePage() {
   return (
     <div className="layout">
       <Sidebar />
       <main className="main">
-        <HeaderImage/>
+        <HeaderImage />
         <About />
         <Experience />
-
+        <Projects />
         <Skills />
-        <Footer />
+        <PageFooter />
       </main>
     </div>
+  )
+}
+ 
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
