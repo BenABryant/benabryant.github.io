@@ -13,6 +13,8 @@
 
   --sm:          0.9rem;
   --xs:         0.8rem;
+  --light:       300;
+  --heavy:       var(--heavy);
 
 
   --section-pad: clamp(4rem, 10vw, 4rem);
@@ -49,7 +51,7 @@ body {
   background-color: var(--bg);
   color: var(--text);
   font-family: var(--font-1);
-  font-weight: 300;
+  font-weight : var(--light);
   line-height: 1.75;
 }
 
@@ -75,7 +77,7 @@ a:hover { opacity: 0.75; }
   display: block;
   font-family: var(--font-1);
   font-size: var(--sm);
-  font-weight: 500;
+  font-weight: var(--heavy);
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--primary);

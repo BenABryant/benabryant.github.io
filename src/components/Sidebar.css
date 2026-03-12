@@ -37,7 +37,7 @@
 
 .sidebar__nav a {
   font-size: var(--sm);
-  font-weight: 500;
+  font-weight: var(--heavy);
   color: var(--text-muted);
   transition: color var(--transition);
 }

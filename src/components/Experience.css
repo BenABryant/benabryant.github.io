@@ -23,7 +23,7 @@
 .exp__meta {
   font-size: var(--xs);
   color: var(--primary);
-  font-weight: 500;
+  font-weight: var(--heavy);
 }
 
 .exp__desc {
