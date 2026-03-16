@@ -45,5 +45,16 @@ export const PROJECTS: Project[] = [
     tags: ['C', 'x86', 'Assembly', 'OS', 'UNIX'],
     image: '/projects/os.png',
     featured: true,
-  }
+  },
+  {
+    id: 'snake',
+    title: 'Snake Game',
+    tagline: 'A simple implementation of the classic Snake game',
+    description: 
+      "A simple implementation of Snake bult with Verilog to be run on an DE1-SoC FPGA",
+    tags: ['Verilog', 'FPGA', 'Hardware Design'],
+    github: 'https://github.com/benabryant/snake',
+    image: '/projects/snake.png',
+    featured: false,
+  },
 ]
