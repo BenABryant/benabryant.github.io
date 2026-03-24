@@ -1,13 +1,14 @@
-import { GameState } from "../../hooks/useGameSocket"
 import "./TicTacToe.css"
 
-export default function TicTacToe({ gameState, sendMove }: { gameState: GameState, sendMove: (move: number) => void }) {
-  const { board, isPlaying, winner } = gameState
+export default function TicTacToe({ state, sendMove }: { state: any, sendMove: (move: number) => void }) {
+  if (!state) return <div>Loading...</div>
+  const board: (string | null)[] = state.board
+  const winner: string | null = state.winner  
 
   const statusText = () => {
     if (winner)               return "Winner: " + winner
     if (board.every(Boolean)) return "It's a draw!"
-    if (isPlaying)       return ""
+    else                      return ""
   }
 
   return (
@@ -23,7 +24,7 @@ export default function TicTacToe({ gameState, sendMove }: { gameState: GameStat
             key={i}
             className={`ttt__cell ${cell ? `ttt__cell--${cell}` : ""}`}
             onClick={() => sendMove(i)}
-            disabled={!!cell || !isPlaying}
+            disabled={!!cell || !!winner}
           >
             {cell}
           </button>

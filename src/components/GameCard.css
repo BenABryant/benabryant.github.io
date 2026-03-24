@@ -1,0 +1,26 @@
+.games-card {
+  display:        flex;
+  flex-direction: column;
+  align-items:    flex-start;
+  gap:            0.4rem;
+  padding:        1.25rem;
+  align-items:    center;
+  background: var(--bg-subtle);
+  width:          100%;
+}
+
+.games-title {
+  font-weight: var(--heavy);
+  color:       var(--text);
+}
+
+.games-desc {
+  font-size: var(--sm);
+  color:     var(--text-muted);
+}
+
+.games-players {
+  font-size:   var(--xs);
+  color:       var(--primary);
+  margin-top:  0.25rem;
+}

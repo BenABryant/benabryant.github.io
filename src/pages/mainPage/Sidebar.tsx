@@ -19,6 +19,7 @@ export default function Sidebar() {
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
+        <a href="#games">Games</a>
         <a href="#skills">Skills</a>
       </nav>
 

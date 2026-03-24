@@ -1,0 +1,17 @@
+.game-header__rules {
+  background: none;
+  color: var(--text-muted);
+  font-family: var(--font-1);
+  font-weight: var(--heavy);
+  font-size: calc(var(--sm) * 1.2);
+  cursor: pointer;
+  border: none;
+  padding: 0.5rem;
+  align-items: center;
+  transition: color var(--transition);
+  margin-left: auto;
+}
+
+.game-header__rules:hover {
+  color: var(--primary);
+}

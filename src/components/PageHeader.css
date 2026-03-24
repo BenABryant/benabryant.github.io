@@ -1,20 +1,29 @@
 .page-header {
   position: sticky;
   top: 0;
-  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
   background-color: var(--bg-subtle);
   border-bottom: 1.5px solid var(--border);
-  padding: 1rem 2rem;
-  display: flex;
+  padding: 1.5rem 2rem;
   align-items: center;
   gap: 2rem;
 }
 
+.page-header__back {
+  font-family: var(--font-1);
+  font-weight: var(--heavy);
+  font-size: 1.2rem;
+  color: var(--primary)
+}
+
 .page-header__name {
-  font-family: var(--font-2);
-  font-weight: calc(var(--heavy) * 1.2);
-  color: var(--text);
-  white-space: nowrap;
+  font-family:  var(--font-2);
+  font-size:    1.5rem;
+  font-weight:  calc(var(--heavy) * 1.2);
+  color:        var(--text);
+  flex: 1;
+  text-align: center;
 }
 
 .page-header__name:hover {

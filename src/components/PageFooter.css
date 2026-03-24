@@ -15,6 +15,6 @@
 }
 
 .footer__back {
-  color: var(--text-muted);
+  color: var(--primary);
   font-size: var(--sm);
 }

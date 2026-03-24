@@ -41,7 +41,7 @@ export const PROJECTS: Project[] = [
     title: 'Operating System',
     tagline: 'A simple operating system kernel',
     description:
-      "Built off of MIT\'s educational xk kernel on emulated hardware using QEMU. Implemented process management(pipe, fork, exec), virtual memory, and a crash-safe filesystem. I can share the code but don't want to post it publicly for academic integrity reasons.",
+      "Built off of MIT\'s educational xk kernel on emulated hardware using QEMU. Implemented process management(pipe, fork, exec), virtual memory, and a crash-safe filesystem.",
     tags: ['C', 'x86', 'Assembly', 'OS', 'UNIX'],
     image: '/projects/os.png',
     featured: true,

@@ -10,7 +10,7 @@ export default function ProjectsPage() {
         <div className="projects-page__inner">
           <h1 className="projects-page__title">Projects</h1>
           <p className="projects-page__lead">
-            A list of things I've built — side projects, coursework, and experiments.
+            A mix of personal projects, academic work, and experiments.
           </p>
  
           <div className="all-projects__grid">

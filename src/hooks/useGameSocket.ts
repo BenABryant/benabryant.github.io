@@ -5,12 +5,6 @@ const SERVER = import.meta.env.DEV
   ? "http://localhost:8000"
   : "https://games-0lha.onrender.com"
 
-export interface GameState {
-  board:     (string | null)[]
-  isPlaying: boolean
-  winner:    string | null
-}
-
 export interface GameError {
   code:    string
   message: string
@@ -18,10 +12,10 @@ export interface GameError {
 
 interface UseGameSocketOptions {
   onRoomCreated:   (roomId: string) => void
-  onPlayerJoined:  (state: GameState) => void
-  onGameStarted:   (state: GameState) => void
-  onMoveMade:      (state: GameState) => void
-  onOpponentLeft:  (state: GameState) => void
+  onPlayerJoined:  () => void
+  onGameStarted:   (state: any) => void
+  onMoveMade:      (state: any) => void
+  onOpponentLeft:  () => void
   onError:         (err: GameError) => void
 }
 
@@ -33,16 +27,18 @@ export function useGameSocket(options: UseGameSocketOptions) {
     const socket = io(SERVER, { transports: ["websocket"] })
     socketRef.current = socket
 
+    {/* Event Listeners*/}
     socket.on("room_created",  (d: { room_id: string }) => {
       roomIdRef.current = d.room_id
       options.onRoomCreated(d.room_id)
     })
-    socket.on("player_joined", (s: GameState) => options.onPlayerJoined(s))
-    socket.on("game_started",  (s: GameState) => options.onGameStarted(s))
-    socket.on("move_made",     (s: GameState) => options.onMoveMade(s))
-    socket.on("opponent_left", (s: GameState) => options.onOpponentLeft(s))
+    socket.on("player_joined", () => options.onPlayerJoined())
+    socket.on("game_started",  (s: any) => options.onGameStarted(s))
+    socket.on("move_made",     (s: any) => options.onMoveMade(s))
+    socket.on("opponent_left", () => options.onOpponentLeft())
     socket.on("error",         (e: GameError) => options.onError(e))
 
+    {/* keeps render instance running when there is an active connection*/}
     const keepAlive = setInterval(() => socket.emit("ping"), 10 * 60 * 1000)
 
     return () => {
@@ -51,6 +47,7 @@ export function useGameSocket(options: UseGameSocketOptions) {
     }
   }, [])
 
+  {/* Post Methods*/}
   const createRoom = (gameType: string) => {
     socketRef.current?.emit("create_room", { game_type: gameType })
   }

@@ -91,7 +91,7 @@ h2 {
 }
 
 .icon-btn {
-  background: none;
+  background: var(--bg-subtle);
   border: 1.5px solid var(--border);
   border-radius: var(--radius);
   color: var(--text-muted);

@@ -6,6 +6,7 @@ import Experience    from './pages/mainPage/Experience'
 import PageFooter    from './components/PageFooter'
 import Skills        from './pages/mainPage/Skills'
 import Projects      from './pages/mainPage/Projects'
+import Games         from './pages/mainPage/Games'
 import ProjectsPage  from './pages/ProjectsPage'
 import GamesPage     from './pages/GamesPage'
 import GameShell     from './pages/games/GameShell'
@@ -21,6 +22,7 @@ function HomePage() {
         <About />
         <Experience />
         <Projects />
+        <Games />
         <Skills />
         <PageFooter />
       </main>
